@@ -1,0 +1,1 @@
+print("a equipe dinamita DO")
