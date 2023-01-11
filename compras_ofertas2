@@ -1,0 +1,32 @@
+prendas = {
+    "medias": 25,
+    "corbata": 43,
+    "pantys": 30 
+}
+
+print("APROVECHA!! TODOS LOS PRODUCTOS CON 20% DE DESCUENTAZO")
+
+pedido = str(input("Ingrese el item de compra: ")).lower()
+cupon = input("Ingresar cupon de descuento: ").upper()
+cupon_disponible = "DIVI"
+
+porcentaje_descuento = 20
+descuento = prendas[pedido] * (porcentaje_descuento /100)
+divi = 5
+
+
+if cupon == "DIVI":
+    print(f"Cupon admitido, el descuento es de {divi}")
+else:
+    print("Cupon invalido")
+
+
+def compras():
+    if pedido and cupon == cupon_disponible:
+        print(f"El valor de {pedido} es {prendas[pedido] - descuento - divi}")
+
+    elif pedido:
+        print(f"El valor de {pedido} es {prendas[pedido] - descuento}")
+
+
+compras()
